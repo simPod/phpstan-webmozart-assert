@@ -164,6 +164,10 @@ class AssertTypeSpecifyingExtensionTest extends \PHPStan\Testing\RuleTestCase
 				'Variable $af is: int',
 				126,
 			],
+			[
+				'Variable $ag is: PHPStan\Type\WebMozartAssert\Foo',
+				129,
+			],
 		]);
 	}
 

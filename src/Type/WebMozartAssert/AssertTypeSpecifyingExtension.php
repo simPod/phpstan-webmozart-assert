@@ -371,6 +371,16 @@ class AssertTypeSpecifyingExtension implements StaticMethodTypeSpecifyingExtensi
 						]
 					);
 				},
+
+				'isAOf' => static function (Scope $scope, Arg $expr, Arg $class): ?\PhpParser\Node\Expr {
+					return new \PhpParser\Node\Expr\FuncCall(
+						new \PhpParser\Node\Name('is_a'),
+						[
+							new Arg($expr->value),
+							$class,
+						]
+					);
+				},
 			];
 		}
 
